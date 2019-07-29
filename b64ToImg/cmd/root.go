@@ -39,8 +39,6 @@ var (
 var rootCmd = &cobra.Command{
 	Use:   "b64ToImg",
 	Short: "",
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
 	Run: func(cmd *cobra.Command, args []string) {
 		do()
 	},
@@ -56,15 +54,8 @@ func Execute() {
 }
 
 func init() {
-	// Here you will define your flags and configuration settings.
-	// Cobra supports persistent flags, which, if defined here,
-	// will be global for your application.
-
-	// Cobra also supports local flags, which will only run
-	// when this action is called directly.
 
 	rootCmd.Flags().IntVarP(&width, "width", "w", 100, "image width")
-	//rootCmd.Flags().IntVarP(&height, "hight", "h", 100, "image height")
 	rootCmd.Flags().StringVarP(&data, "data", "d", "", "image base64 context")
 	rootCmd.Flags().StringVarP(&out, "out", "o", "", "image output path")
 
